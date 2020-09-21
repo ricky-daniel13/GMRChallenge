@@ -40,10 +40,8 @@ public class TableController : MonoBehaviour
 
         watcher.NotifyFilter = NotifyFilters.LastWrite;
 
-        // Add event handlers
         watcher.Changed += OnChanged;
 
-        // Begin watching
         watcher.EnableRaisingEvents = true;
     }
 
@@ -72,7 +70,6 @@ public class TableController : MonoBehaviour
     {
         if (fileChanged)
         {
-            // Do something here…
             fileChanged = false;
             LoadTable();
         }
